@@ -1,0 +1,78 @@
+.main-part {
+    @include clearfix;
+    position: relative;
+    flex: 0 0 (map-get($container-max-widths, 'xl') - $sidebar-width);
+    width: map-get($container-max-widths, 'xl') - $sidebar-width;
+    padding-bottom: 60px;
+    background-position: right;
+    background-size: cover;
+
+    @include screen-down("lg") {
+        flex: 0 0 (map-get($container-max-widths, 'lg') - $sidebar-width);
+        width: map-get($container-max-widths, 'lg') - $sidebar-width;
+    }
+
+    @include screen-down("md") {
+        flex: 0 0 (map-get($container-max-widths, 'md') - $sidebar-width);
+        width: map-get($container-max-widths, 'md') - $sidebar-width;
+    }
+
+    @include screen-down("sm") {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+.main-columns {
+    @include clearfix;
+    padding-top: 25px;
+
+    &.without-sidebar {
+        padding-top: 0;
+
+        .main-content {
+            float: none;
+            width: auto;
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+.main-content {
+    @include clearfix;
+    position: relative;
+    float: left;
+    width: 770px;
+    padding-left: 75px;
+
+    @include screen-down("lg") {
+        width: 500px;
+        padding-left: 25px;
+    }
+
+    @include screen-down("md") {
+        float: none;
+        width: 100%;
+    }
+
+    @include screen-down("sm") {
+        padding: 10px 25px 0;
+    }
+}
+
+.main-sidebar {
+    float: right;
+    width: 178px;
+
+    @include screen-down("md") {
+        float: none;
+        width: 100%;
+        padding-left: 25px;
+        margin-top: 40px;
+    }
+
+    @include screen-down("sm") {
+        padding: 0 25px;
+    }
+}

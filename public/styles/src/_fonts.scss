@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/CalibriRegular/CalibriRegular.eot');
+    src: local('☺'),
+         url('fonts/CalibriRegular/CalibriRegular.woff') format('woff'),
+         url('fonts/CalibriRegular/CalibriRegular.ttf') format('truetype'),
+         url('fonts/CalibriRegular/CalibriRegular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/CalibriRegular-Italic/CalibriRegular-Italic.eot');
+    src: local('☺'),
+         url('fonts/CalibriRegular-Italic/CalibriRegular-Italic.woff') format('woff'),
+         url('fonts/CalibriRegular-Italic/CalibriRegular-Italic.ttf') format('truetype'),
+         url('fonts/CalibriRegular-Italic/CalibriRegular-Italic.svg') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/CalibriBold/CalibriBold.eot');
+    src: local('☺'),
+         url('fonts/CalibriBold/CalibriBold.woff') format('woff'),
+         url('fonts/CalibriBold/CalibriBold.ttf') format('truetype'),
+         url('fonts/CalibriBold/CalibriBold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/CalibriBold-Italic/CalibriBold-Italic.eot');
+    src: local('☺'),
+         url('fonts/CalibriBold-Italic/CalibriBold-Italic.woff') format('woff'),
+         url('fonts/CalibriBold-Italic/CalibriBold-Italic.ttf') format('truetype'),
+         url('fonts/CalibriBold-Italic/CalibriBold-Italic.svg') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}

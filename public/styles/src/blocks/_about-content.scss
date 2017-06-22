@@ -1,0 +1,32 @@
+.about-content {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: justify;
+    color: #000;
+
+    .big-links {
+        @include clearfix;
+        font-size: 24px;
+        text-decoration: underline;
+
+        a {
+            float: left;
+            display: block;
+            margin-right: 50px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    @include screen-down("lg") {
+        .big-links {
+            a {
+                margin-right: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+.reviews-content {
+    font-size: 16px;
+    line-height: 16px;
+    color: #000;
+
+    .questionary {
+        @include clearfix;
+        height: 50px;
+        margin-bottom: 40px;
+
+        h4 {
+            float: left;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        a {
+            position: relative;
+            display: inline-block;
+            margin-left: 45px;
+            padding-left: 42px;
+
+            span {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 35px;
+                height: 33px;
+                background: url("images/ico-anketa.png") no-repeat;
+            }
+        }
+
+        &.right {
+            float: right;
+        }
+
+        &.left {
+            float: left;
+        }
+    }
+
+    .respond {
+        @include clearfix;
+        clear: both;
+        margin-bottom: 40px;
+
+        .info {
+            width: 500px;
+        }
+
+        h4 {
+            margin-bottom: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 21px;
+        }
+
+        .text {
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 18px;
+            text-align: justify;
+            color: #343333;
+        }
+
+        .image {
+            display: block;
+            width: 177px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.left {
+            .info {
+                float: left;
+            }
+
+            .image {
+                float: right;
+            }
+        }
+
+        &.right {
+            .info {
+                float: right;
+            }
+
+            .image {
+                float: left;
+            }
+        }
+    }
+
+    @include screen-down("lg") {
+        .respond {
+            .info {
+                width: 275px;
+            }
+        }
+    }
+
+    @include screen-down("md") {
+        .respond {
+            .info {
+                width: 315px;
+            }
+        }
+    }
+
+    @include screen-down("sm") {
+        .questionary {
+            margin-bottom: 10px;
+
+            &,
+            &.right,
+            &.left {
+                float: none;
+            }
+        }
+
+        .respond {
+            .info {
+                width: 390px;
+            }
+
+            &,
+            &.right,
+            &.left {
+                .image {
+                    float: left;
+                }
+
+                .info {
+                    float: right;
+                }
+            }
+        }
+    }
+
+    @include screen-down("xs") {
+        .questionary {
+            height: auto;
+            margin: 0 0 40px;
+
+            h4 {
+                float: none;
+                display: inline-block;
+                font-size: 24px;
+                vertical-align: middle;
+            }
+
+            a {
+                display: inline-block;
+                margin-left: 15px;
+                vertical-align: middle;
+
+                span {
+                    top: -6px;
+                }
+            }
+        }
+
+        .respond {
+            .info {
+                float: none !important;
+                width: auto;
+            }
+
+            .image {
+                float: none !important;
+            }
+        }
+    }
+
+    @include screen-down(500) {
+        .questionary {
+            h4 {
+                display: block;
+            }
+
+            a {
+                margin-top: 15px;
+                margin-left: 0;
+            }
+        }
+    }
+}

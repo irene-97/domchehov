@@ -1,0 +1,105 @@
+.pagination {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #000;
+
+    &-arrows {
+        @include clearfix;
+
+        a {
+            font-size: 18px;
+            text-decoration: none;
+            color: #000;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .prev {
+            float: left;
+            margin: 5px 0;
+            padding-left: 25px;
+            background: url("images/brown-arr-left.png") no-repeat left;
+        }
+
+        .next {
+            float: right;
+            margin: 5px 0;
+            padding-right: 25px;
+            background: url("images/brown-arr-right.png") no-repeat right;
+        }
+    }
+
+    &-total {
+        margin-top: 15px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &-links {
+        &.square {
+            font-size: 0;
+
+            b,
+            a {
+                display: inline-block;
+                min-width: 28px;
+                max-width: 100%;
+                margin-right: 4px;
+                margin-bottom: 4px;
+                padding: 5px 10px;
+                overflow: hidden;
+                font-size: 16px;
+                text-align: center;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                vertical-align: top;
+            }
+
+            b {
+                color: #000;
+                background: #d0d0d0;
+            }
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                background: #4d4d4d;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    @include screen-down("sm") {
+        &-links {
+            &.square {
+                b,
+                a {
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+
+    @include screen-down("xs") {
+        &-arrows {
+            a {
+                font-size: 20px;
+            }
+
+            .prev {
+                margin: 10px 0;
+            }
+
+            .next {
+                margin: 10px 0;
+            }
+        }
+    }
+}

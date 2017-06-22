@@ -1,0 +1,40 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+
+@import "reset";
+
+@import "fonts";
+@import "base";
+@import "utility";
+@import "fon";
+@import "icons";
+@import "vendor";
+
+@import "elements/copy";
+@import "elements/pagination";
+@import 'elements/product';
+@import "elements/article";
+@import 'elements/form-products';
+@import "elements/mobile-menu";
+
+@import "blocks/sidebar";
+@import "blocks/mobile-sidebar";
+@import "blocks/main-part";
+@import "blocks/main-menu";
+@import "blocks/recommendation";
+
+@import "blocks/index-content";
+@import "blocks/contacts-content";
+@import "blocks/sale-content";
+@import "blocks/design-content";
+@import "blocks/about-content";
+@import "blocks/personal-content";
+@import "blocks/products-content";
+@import "blocks/product-content";
+@import "blocks/news-content";
+@import "blocks/reviews-content";
+
+@import "container";
+@import "modals";
+@import "page";

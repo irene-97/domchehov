@@ -1,0 +1,139 @@
+.products-content {
+    font-size: 16px;
+    line-height: 16px;
+    color: #000;
+
+    .you-see {
+        margin-bottom: 20px;
+        font-size: 21px;
+        color: #343333;
+
+        em {
+            font-size: 21px;
+            color: #000;
+        }
+    }
+
+    .products {
+        @include clearfix;
+        margin-right: -50px;
+    }
+
+    .product {
+        float: left;
+        margin: 14px 14px 0 0;
+
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(4n-3) {
+            clear: left;
+        }
+
+        &:nth-child(-n+4) {
+            margin-top: 0;
+        }
+    }
+
+    @include screen-down("lg") {
+        .products {
+            margin-right: 0;
+        }
+
+        .product {
+            width: 149px;
+            height: 149px;
+
+            &:nth-child(4n) {
+                margin-right: 14px;
+            }
+
+            &:nth-child(4n-3) {
+                clear: none;
+            }
+
+            &:nth-child(-n+4) {
+                margin-top: 14px;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(3n-2) {
+                clear: left;
+            }
+
+            &:nth-child(-n+3) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include screen-down("md") {
+        .product {
+            width: 163px;
+            height: 163px;
+        }
+    }
+
+    @include screen-down("sm") {
+        .product {
+            width: 187px;
+            height: 187px;
+        }
+    }
+
+    @include screen-down("xs") {
+        .product {
+            position: relative;
+            width: calc(50% - 7px);
+            padding-bottom: calc(50% - 7px);
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+            }
+
+            .name {
+                z-index: 2;
+            }
+
+            &:nth-child(3n) {
+                margin-right: 14px;
+            }
+
+            &:nth-child(3n-2) {
+                clear: none;
+            }
+
+            &:nth-child(-n+3) {
+                margin-top: 14px;
+            }
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(2n-1) {
+                clear: left;
+            }
+
+            &:nth-child(-n+2) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include screen-down(400) {
+        .product {
+            float: none;
+            width: 270px;
+            min-height: 270px;
+            margin: 14px auto !important;
+        }
+    }
+}

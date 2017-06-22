@@ -1,0 +1,25 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    .hidden-down-#{$breakpoint} {
+        @include screen-down($breakpoint) {
+            display: none;
+        }
+    }
+
+    .hidden-only-#{$breakpoint} {
+        @include screen-only($breakpoint) {
+            display: none;
+        }
+    }
+
+    .hidden-up-#{$breakpoint} {
+        @include screen-up($breakpoint) {
+            display: none;
+        }
+    }
+}
+
+.clr,
+.clear,
+.clearfix {
+    @include clearfix;
+}

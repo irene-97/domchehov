@@ -1,0 +1,5 @@
+.mobile-menu {
+    &:not(.mm-menu) {
+        display: none;
+    }
+}

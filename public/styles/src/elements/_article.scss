@@ -1,0 +1,52 @@
+.article {
+    @include clearfix;
+    margin-bottom: 40px;
+
+    .title {
+        margin-bottom: 20px;
+
+        .date {
+            font-size: 18px;
+            color: #343333;
+        }
+
+        .detail {
+            font-size: 18px;
+            text-decoration: underline;
+            color: #000;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .image {
+        float: left;
+        max-width: 100%;
+        border: 3px solid #fff;
+        margin: 0 15px 15px 0;
+    }
+
+    .description {
+        //font-family: "Times New Roman", sans-serif;
+        font-size: 16px; // 15px
+        line-height: 16px; // 14px
+        text-align: justify;
+        color: #000;
+    }
+
+    .more {
+        float: right;
+        margin-top: 25px;
+        font-size: 16px;
+        color: #000;
+    }
+
+    @include screen-down("xs") {
+        .image {
+            min-width: 100px;
+            max-width: calc(33% - 15px);
+        }
+    }
+}

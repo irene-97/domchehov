@@ -1,0 +1,159 @@
+.sidebar {
+    position: relative;
+    display: block;
+    flex: 0 0 $sidebar-width;
+    width: $sidebar-width;
+    margin-left: 0;
+    padding-top: 40px;
+    z-index: 100;
+    background: url("images/sidebar-bg.png");
+
+    .logo {
+        margin-bottom: 10px;
+
+        img {
+            display: block;
+        }
+    }
+
+    a {
+        display: block;
+    }
+
+    .phone {
+        margin-bottom: 10px;
+        padding-left: 18px;
+        font-size: 16px;
+        color: #ababab;
+
+        em {
+            line-height: 19px;
+        }
+
+        .tel {
+            display: block;
+            margin: 10px 0;
+            font-size: 29px;
+            line-height: 29px;
+            color: #e8e8e8;
+        }
+
+        .hour {
+            padding-right: 15px;
+            font-size: 21px;
+            background: url("images/zero.png") no-repeat right 5px;
+            color: #e8e8e8;
+        }
+    }
+
+    .request-call {
+        display: block;
+        text-align: right;
+        margin-bottom: -3px;
+    }
+
+    .offers {
+        width: 225px;
+        height: 45px;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        background: url("images/offers.png");
+    }
+
+    .sidebar-menu {
+        display: block;
+        position: relative;
+        margin-bottom: 3px;
+        padding: 6px 8px;
+        background: url('images/sidebar-bg.png');
+
+        .item {
+            display: block;
+            position: relative;
+            padding: 6px 8px;
+            margin-bottom: 3px;
+            line-height: 20px;
+            background: url('images/menu-link-bg.png');
+
+            &:hover {
+                background: url("images/black-opacity-bg.png");
+
+                .submenu {
+                    display: block;
+                }
+            }
+
+            a {
+                display: block;
+                position: relative;
+                font-size: 19px;
+                text-decoration: none;
+                color: #c1bebe;
+            }
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            width: 260px;
+            left: 240px;
+            top: 0;
+            padding: 0;
+            z-index: 2;
+
+            .subitem {
+                display: block;
+                position: relative;
+                margin-bottom: 3px;
+                padding: 6px 8px;
+                line-height: 20px;
+                background: url("images/submenu-bg.png");
+
+                &:hover {
+                    background: url("images/submenu-hover-bg.png");
+                }
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    .banner-block {
+        margin-top: 25px;
+        padding: 0 9px;
+
+        a {
+            display: block;
+            text-align: center;
+
+            img {
+                display: block;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .social {
+        background: url("images/menu-link-bg.png");
+        padding: 6px 8px;
+        text-align: center;
+        margin-top: 10px;
+
+        .b-share_theme_counter .b-share-btn__wrap {
+            position: relative;
+            float: left;
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    @include screen-down("sm") {
+        display: none;
+    }
+}

@@ -1,0 +1,19 @@
+@for $i from 1 through 3 {
+    .fon-#{$i} {
+        .main-part {
+            background: url("images/fon-#{$i}.jpg") 50% 50% no-repeat;
+            background-size: cover;
+        }
+    }
+
+    @include screen-down("sm") {
+        .fon-#{$i} {
+            background: url("images/fon-#{$i}.jpg") 50% 50% no-repeat;
+            background-size: cover;
+
+            .main-part {
+                background-image: none;
+            }
+        }
+    }
+}

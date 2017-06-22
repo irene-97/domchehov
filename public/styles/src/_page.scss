@@ -1,0 +1,17 @@
+//noinspection CssOverwrittenProperties
+#page {
+    min-height: 100vh;
+    height: auto !important;
+
+    > .container {
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+        overflow: hidden;
+
+        @include screen-down("sm") {
+            display: block;
+            min-height: 0;
+        }
+    }
+}

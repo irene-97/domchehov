@@ -1,0 +1,112 @@
+.personal-content {
+    font-size: 16px;
+    line-height: 16px;
+    color: #000;
+
+    .personal {
+        @include clearfix;
+
+        .human {
+            float: left;
+            width: 154px;
+            margin-right: 26px;
+            margin-bottom: 25px;
+
+            img {
+                display: block;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            span {
+                display: block;
+                margin-top: 10px;
+                overflow: hidden;
+                font-size: 18px;
+                text-align: center;
+                text-overflow: ellipsis;
+                color: #000;
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+
+            &:nth-child(4n-3) {
+                clear: left;
+            }
+        }
+    }
+
+    @include screen-down("lg") {
+        .personal {
+            .human {
+                width: 140px;
+
+                &:nth-child(4n) {
+                    margin-right: 26px;
+                }
+
+                &:nth-child(4n-3) {
+                    clear: none;
+                }
+
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+
+                &:nth-child(3n-2) {
+                    clear: left;
+                }
+            }
+        }
+    }
+
+    @include screen-down("md") {
+        .personal {
+            .human {
+                width: 155px;
+            }
+        }
+    }
+
+    @include screen-down("sm") {
+        .personal {
+            .human {
+                width: 179px;
+            }
+        }
+    }
+
+    @include screen-down("xs") {
+        .personal {
+            .human {
+                width: calc(33% - 16px);
+            }
+        }
+    }
+
+    @include screen-down(500) {
+        .personal {
+            .human {
+                width: calc(50% - 13px);
+
+                &:nth-child(3n) {
+                    margin-right: 26px;
+                }
+
+                &:nth-child(3n-2) {
+                    clear: none;
+                }
+
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+
+                &:nth-child(2n-1) {
+                    clear: left;
+                }
+            }
+        }
+    }
+}
